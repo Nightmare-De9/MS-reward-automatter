@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Bing Search Tabs</title>
+  <script>
+    function openTabsWithDelay(urls, index) {
+      if (index >= urls.length) return;
+
+      // Open the next URL in a new tab
+      window.open(urls[index]);
+
+      // Schedule the next tab to open after 2 seconds
+      setTimeout(function() {
+        openTabsWithDelay(urls, index + 1);
+      }, 2000);
+    }
+
+    function openBingSearchTabs() {
+  const searchUrls = [
+    "https://www.bing.com/search?q=A",
+    "https://www.bing.com/search?q=B",
+    "https://www.bing.com/search?q=C",
+    "https://www.bing.com/search?q=D",
+    "https://www.bing.com/search?q=E",
+    "https://www.bing.com/search?q=F",
+    "https://www.bing.com/search?q=G",
+    "https://www.bing.com/search?q=H",
+    "https://www.bing.com/search?q=I",
+    "https://www.bing.com/search?q=J",
+    "https://www.bing.com/search?q=K",
+    "https://www.bing.com/search?q=L",
+    "https://www.bing.com/search?q=M",
+    "https://www.bing.com/search?q=N",
+    "https://www.bing.com/search?q=O",
+    "https://www.bing.com/search?q=P",
+    "https://www.bing.com/search?q=Q",
+    "https://www.bing.com/search?q=R",
+    "https://www.bing.com/search?q=S",
+    "https://www.bing.com/search?q=T",
+    "https://www.bing.com/search?q=U",
+    "https://www.bing.com/search?q=V",
+    "https://www.bing.com/search?q=W",
+    "https://www.bing.com/search?q=X",
+    "https://www.bing.com/search?q=Y",
+    "https://www.bing.com/search?q=Z",
+    "https://www.bing.com/search?q=a",
+    "https://www.bing.com/search?q=b",
+    "https://www.bing.com/search?q=c",
+    "https://www.bing.com/search?q=d",
+    "https://www.bing.com/search?q=e"
+  ];
+
+      // Start opening tabs with a delay
+      openTabsWithDelay(searchUrls, 0);
+    }
+  </script>
+</head>
+<body>
+  <h1>Open Bing Search Tabs</h1>
+  <p>Click the button below to open Bing search tabs:</p>
+  <button onclick="openBingSearchTabs()">Open Tabs</button>
+</body>
+</html>
